@@ -1,0 +1,17 @@
+backend:
+  name: github
+  repo: DVLrepertoire/DVLrepertoire.github.io
+  branch: main
+
+media_folder: "assets/images"
+public_folder: "/assets/images"
+
+collections:
+  - name: "songs"
+    label: "Songs"
+    folder: "_songs"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
