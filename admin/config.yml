@@ -2,6 +2,8 @@ backend:
   name: github
   repo: DVLrepertoire/DVLrepertoire.github.io
   branch: main
+  auth_scope: repo
+  app_id: Ov23liMwxM4SQ6X4hVHN
 
 media_folder: "assets/images"
 public_folder: "/assets/images"
