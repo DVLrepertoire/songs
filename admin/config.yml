@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: DVLrepertoire/DVLrepertoire.github.io
+  repo: DVLrepertoire/songs
   branch: main
   auth_scope: repo
   client_id: Ov23liMwxM4SQ6X4hVHN
