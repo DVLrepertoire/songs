@@ -6,16 +6,15 @@
     <script>
       window.CMS_MANUAL_INIT = true;
     </script>
-    <script src="https://unpkg.com/netlify-cms-app@^2.0.0/dist/netlify-cms-app.js"></script>
+    <script src="https://unpkg.com/netlify-cms@^2.10.0/dist/netlify-cms.js"></script>
   </head>
   <body>
     <div id="nc-root"></div>
 
     <script>
       window.addEventListener('DOMContentLoaded', function () {
-        const cms = window.CMS || window.NetlifyCmsApp;
-        if (cms && typeof cms.init === 'function') {
-          cms.init({
+        if (window.CMS && typeof window.CMS.init === 'function') {
+          window.CMS.init({
             config: '/songs/admin/config/config.yml'
           });
         } else {
