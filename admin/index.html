@@ -13,9 +13,14 @@
 
     <script>
       window.addEventListener('DOMContentLoaded', function () {
-        window.NetlifyCmsApp.init({
-          config: '/songs/admin/config/config.yml' // your correct custom path
-        });
+        const cms = window.CMS || window.NetlifyCmsApp;
+        if (cms && typeof cms.init === 'function') {
+          cms.init({
+            config: '/songs/admin/config/config.yml'
+          });
+        } else {
+          console.error('CMS failed to load.');
+        }
       });
     </script>
   </body>
