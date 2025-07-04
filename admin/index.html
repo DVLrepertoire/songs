@@ -10,16 +10,11 @@
   </head>
   <body>
     <div id="nc-root"></div>
-
     <script>
       window.addEventListener('DOMContentLoaded', function () {
-        if (window.CMS && typeof window.CMS.init === 'function') {
-          window.CMS.init({
-            config: '/songs/admin/config/config.yml'
-          });
-        } else {
-          console.error('CMS failed to load.');
-        }
+        CMS.init({
+          config: '/songs/admin/config/config.yml'
+        });
       });
     </script>
   </body>
