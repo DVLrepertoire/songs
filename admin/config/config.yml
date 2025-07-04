@@ -4,6 +4,7 @@ backend:
   branch: main
   auth_scope: repo
   client_id: Ov23liMwxM4SQ6X4hVHN
+  base_url: https://dvlrepertoire.github.io/songs
 
 media_folder: "assets/images"
 public_folder: "/assets/images"
