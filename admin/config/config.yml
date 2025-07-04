@@ -9,6 +9,9 @@ backend:
 media_folder: "assets/images"
 public_folder: "/assets/images"
 
+media_library:
+  name: uploadcare
+
 collections:
   - name: "songs"
     label: "Songs"
