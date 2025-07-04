@@ -1,3 +1,6 @@
 markdown: kramdown
 theme: minima
 title: Home
+
+include:
+  - _songs
