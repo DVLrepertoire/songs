@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Song List
+title: Index
 ---
 
-## Song List
+## Index
 
 <ul>
   {% for page in site.pages %}
