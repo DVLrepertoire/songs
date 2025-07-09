@@ -46,4 +46,4 @@ And if I die in Raleigh at least I will die free
 
 Chorus ad lib  
 
-Bob Dylan and Ketch Secor
+*Bob Dylan and Ketch Secor*
