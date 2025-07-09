@@ -3,12 +3,11 @@ layout: default
 title: Index
 ---
 
-## Index
+## Debug: All Pages
 
 <ul>
   {% for page in site.pages %}
-    {% if page.dir == "/songs/_songs/" %}
-      <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-    {% endif %}
+    <li>{{ page.url }} — {{ page.title }}</li>
   {% endfor %}
 </ul>
+
