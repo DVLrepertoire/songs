@@ -3,11 +3,11 @@ layout: default
 title: Index
 ---
 
-## Debug: All Pages
+## Index
 
 <ul>
-  {% for page in site.pages %}
-    <li>{{ page.url }} — {{ page.title }}</li>
+  {% assign sorted_songs = site.songs | sort: "title" %}
+  {% for song in sorted_songs %}
+    <li><a href="{{ song.url }}">{{ song.title }}</a></li>
   {% endfor %}
 </ul>
-
