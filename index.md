@@ -7,7 +7,7 @@ title: Index
 
 <ul>
   {% for page in site.pages %}
-    {% if page.dir == "/songs/" %}
+    {% if page.dir == "/songs/_songs/" %}
       <li><a href="{{ page.url }}">{{ page.title }}</a></li>
     {% endif %}
   {% endfor %}
