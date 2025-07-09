@@ -5,3 +5,4 @@ title: Home
 collections:
   songs:
     output: true
+    permalink: /songs/:name/
