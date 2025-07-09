@@ -2,5 +2,6 @@ markdown: kramdown
 theme: minima
 title: Home
 
-include:
-  - _songs
+collections:
+  songs:
+    output: true
