@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Index
+title: Song List
 ---
 
-## Index
+## Song List
 
 <ul>
   {% assign sorted_songs = site.songs | sort: "title" %}
   {% for song in sorted_songs %}
-    <li><a href="{{ song.url }}">{{ song.title }}</a></li>
+    <li><a href="{{ song.url | relative_url }}">{{ song.title }}</a></li>
   {% endfor %}
 </ul>
