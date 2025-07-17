@@ -29,6 +29,9 @@ h3 {
 
 /* Tweak list and paragraph spacing */
 p, li {
-  font-size: clamp(1rem, 2.5vw, 1.1rem);
   margin-bottom: 1em;
+}
+
+p em{
+	font-size: 0.9rem;
 }
