@@ -29,8 +29,11 @@ h3 {
 }
 
 /* Tweak list and paragraph spacing */
-p, li {
+p {
   margin-bottom: 1.7em;
+}
+li {
+  margin-bottom: 1em;
 }
 
 p em{
