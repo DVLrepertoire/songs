@@ -2,7 +2,7 @@
 
 /* Make body text scale between 16px and 20px depending on viewport */
 body {
-  font-size: clamp(1.3rem, 2.5vw, 1.25rem);
+  font-size: clamp(1.2rem, 2.5vw, 1.25rem);
   line-height: 1.6;
 }
 
