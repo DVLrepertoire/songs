@@ -3,7 +3,7 @@ theme: minima
 title: Home
 
 minima:
-  skin: auto
+  skin: dark
 
 collections:
   songs:
