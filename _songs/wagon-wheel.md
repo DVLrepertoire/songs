@@ -1,6 +1,7 @@
 ---
 layout: default
-title: "Wagon Wheel
+title: "Wagon Wheel"
+---
 
 # Wagon Wheel
 
