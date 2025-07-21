@@ -2,9 +2,6 @@ markdown: kramdown
 theme: minima
 title: Home
 
-minima:
-  skin: dark
-
 collections:
   songs:
     output: true
