@@ -14,6 +14,7 @@ Justice and freedom demand
 But light one candle for the wisdom to know  
 When the peacemaker's time is at hand  
 
+**Chorus:**  
 Don't let the light go out  
 It's lasted for so many years  
 Don't let the light go out  
@@ -29,7 +30,7 @@ That anger not tear us apart
 And light one candle to find us together  
 With peace as the song in our hearts  
 
-Chorus  
+**Chorus**  
 
 What is the memory that's valued so highly  
 That we keep it alive in that flame?  
@@ -41,8 +42,6 @@ That justice would somehow prevail
 This is the burden, this is the promise  
 This is why we will not fail  
 
-Chorus  
-
-Don't let the light go out (3 times)  
+**Chorus**  
 
 *Peter Yarrow*
