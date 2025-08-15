@@ -1,7 +1,6 @@
 ---
 layout: default
 title: "MTA Song"
-draft: true
 ---
 
 # MTA Song
