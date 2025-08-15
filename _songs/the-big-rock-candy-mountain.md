@@ -5,42 +5,53 @@ title: "The Big Rock Candy Mountain"
 
 # The Big Rock Candy Mountain
 
-On a summer's day in the month of May  
-A burly bum came a-hikin'.  
-Through a shady lane in the sugar cane  
-He was lookin' for his likin'.  
-As he strolled along, he sang a song  
-Of a land of milk and honey,  
-Where a bum can stay for many a day  
-And you don't need any money.  
+One evening as the sun went down
+And the jungle fire was burning
+Down the track came a hobo hikin'
+And he said, "Boys, I'm not turning
+I'm headed for a land that's far away
+Beside the crystal fountains
+So come with me, we'll go and see
+The Big Rock Candy Mountains
 
-Oh, the buzzing of the bees  
-in the cigarette trees,  
-By the soda water fountain  
-Near the lemonade springs  
-where the bluebird sings  
-On the Big Rock Candy Mountain  
+In The Big Rock Candy Mountains
+There's a land that's fair and bright
+Where the handouts grow on bushes
+And you sleep out every night
+Where the boxcars all are empty
+And the sun shines every day
+On the birds and the bees and the cigarette trees
+The lemonade springs where the bluebird sings
+In The Big Rock Candy Mountains
 
-In the Big Rock Candy Mountain  
-The cops have wooden legs  
-The bulldogs all have rubber teeth  
-And the hens lay soft-boiled eggs  
-The box-cars all are empty  
-And the sun shines every day  
-I'm bound to go where there ain't no snow  
-Where the sleet don't fall  
-and the winds don't blow  
-In the Big Rock Candy Mountain.  
+In The Big Rock Candy Mountains
+All the cops have wooden legs
+And the bulldogs all have rubber teeth
+And the hens lay soft-boiled eggs
+The farmers' trees are full of fruit
+And the barns are full of hay
+Oh I'm bound to go where there ain't no snow
+Where the rain don't fall, the wind don't blow
+In The Big Rock Candy Mountains
 
-In the Big Rock Candy Mountain  
-You never change your socks  
-And little streams of alky-hol  
-Come trickling down the rocks  
-O the shacks all have to tip their hats  
-And the railway bulls are blind  
-There's a lake of stew and ginger ale too  
-And you can paddle  
-all around it in a big canoe  
-In the Big Rock Candy Mountain  
+In The Big Rock Candy Mountains
+You never change your socks
+And the little streams of alcohol
+Come a-trickling down the rocks
+The brakemen have to tip their hats
+And the railroad bulls are blind
+There's a lake of stew and of whiskey, too
+You can paddle all around 'em in a big canoe
+In The Big Rock Candy Mountains
+
+In The Big Rock Candy Mountains
+The jails are made of tin
+And you can walk right out again
+As soon as you are in
+There ain't no short-handle shovels
+No axes, saws or picks
+I'm a-goin' to stay where you sleep all day
+Where they hung the jerk that invented work
+In The Big Rock Candy Mountains
 
 *Harry "Haywire Mac" McClintock*
