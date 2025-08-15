@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Let it Be"
-draft: true
+hidden: true
 ---
 
 # Let it Be
