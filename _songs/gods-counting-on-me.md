@@ -10,6 +10,7 @@ Things are not what they should be
 God's counting on me  
 God's counting on you. (repeat verse)  
 
+**Chorus:**  
 Hoping we'll all pull through  
 Hoping we'll all pull through  
 Me and you  
