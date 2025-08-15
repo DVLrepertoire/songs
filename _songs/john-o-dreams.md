@@ -5,50 +5,25 @@ title: "John O' Dreams"
 
 # John O' Dreams  
 
-When midnight comes  
-Good people homeward tread  
-Seek now your blankets  
-And your feather bed  
-Home comes the rover  
-His journey's over  
-Yield up the nighttime  
-To old John O'Dreams  
-Yield up the nighttime  
-To old John O'Dreams  
-  
-Across the hill  
-The sun has gone astray  
-Tomorrow's cares  
-Are many dreams away  
-The stars are glowing  
-Your candle's dying  
-Yield up the darkness  
-To old John O'Dreams  
-Yield up the darkness  
-To old John O'Dreams  
-  
-Both man and master  
-In the night are one  
-All things are equal  
-When the day is done  
-The prince and ploughman  
-The slave and freeman  
-All find their comfort  
-In old John O'Dreams  
-All find their comfort  
-In old John O'Dreams  
-See upcoming country shows  
-Get tickets for your favorite artists  
-  
-Now as you sleep  
-Your dreams going in clear  
-The hawks of morning  
-Cannot harm you here  
-Sleep is your river  
-Float on forever  
-And for your boatman  
-Choose old John O'Dreams  
-And for your boatman  
-Choose old John O'Dreams  
+When midnight comes and people homeward tread  
+Seek now your blanket and your feather bed  
+Home comes the rover his journeys over  
+Yield up the night time to old John O’Dreams  
+
+Across the hills the sun has gone astray  
+Tomorrows cares are many dreams away  
+They stars are flying your candle is dying  
+Yield up the darkness to old John O’Dreams  
+
+Both man and master in the night are one  
+All things are equal when the day is done  
+The prince and the ploughman, the slave and the freeman  
+All find their comfort in old John O’Dreams  
+
+When sleep it comes the dreams come running clear  
+The hawks of morning cannot reach you here  
+Sleep is a river, flow on forever  
+And for your boatman choose old John O’Dreams  
+And for your boatman choose old John O’Dreams  
   
 *Bill Caddick*
