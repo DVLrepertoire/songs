@@ -25,13 +25,13 @@ Gonna let my little light shine.
 
 **Chorus**  
 
-Sunday gave me the gift of love,  
-Monday peace came from above,  
-Tuesday He told me to have more faith,  
-Wednesday He gave me a little more grace,  
-Thursday He told me to watch and pray,  
-Friday He told me just what to say  
-Saturday He gave me the power divine  
+Monday gave me the gift of love,  
+Tuesday peace came from above,  
+Wednesday He told me to have more faith,  
+Thursday He gave me a little more grace,  
+Friday He told me to watch and pray,  
+Saturday He told me just what to say  
+On Sunday He gave me the power divine  
 Just to let my little light shine.  
 
 **Chorus**  
