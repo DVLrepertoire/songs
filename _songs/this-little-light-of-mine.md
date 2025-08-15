@@ -4,7 +4,7 @@ title: "This Little Light of Mine"
 ---
 
 # This Little Light of Mine
-(Turn on ypur flashlight)
+(Turn on your flashlight)
 
 **Chorus:**  
 This little light of mine,  
