@@ -14,6 +14,7 @@ The darkness of the year
 And the heart is growing lonely  
 For the morning  
   
+**Chorus:**  
 Oh, my Joanie, don't you know  
 That the stars are swinging slow  
 And the seas are rolling easy  
@@ -32,7 +33,7 @@ Hear him singing high and thin
 You could swear he's out there singing  
 Of your sorrow  
   
-Chorus 
+**Chorus**  
  
 When the darkness falls around you  
 And the Northwind come to blow  
@@ -43,7 +44,7 @@ He don't care or even know
 He's just walking down the darkness  
 Toward the morning  
   
-Chorus  
+**Chorus**  
   
 It's a pity we don't know  
 What the little flowers know  
@@ -54,7 +55,7 @@ Bow their heads and let it go
 But you know they'll be there shining  
 In the morning  
   
-Chorus  
+**Chorus**  
   
 Now, my Joanie, don't you know  
 That the days are rolling slow  
@@ -65,6 +66,6 @@ And, if that wind would should and ask you
 Won't you tell him that you're weeping  
 For the morning?  
   
-Chorus  
+**Chorus**  
   
 *Gordon Bok, Ann Mayo Muir & Ed Trickett*
