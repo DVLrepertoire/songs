@@ -15,13 +15,13 @@ She just likes the way he smiles
 It takes more than marble and tile  
 Livin' on love  
 
+**Chorus:**  
 Livin' on love, buyin' on time  
 Without somebody  
 nothing ain't worth a dime  
 Just like an old fashioned  
 story book rhyme  
 Livin' on love  
-
 It sounds simple,  
 that's what you're thinkin'  
 But love can walk through fire  
@@ -40,6 +40,6 @@ And she can barely sweep the floor
 Hand in hand, they'll walk through that door  
 Livin' on love  
 
-Chorus  
+**Chorus**  
 
 *Alan Jackson*
