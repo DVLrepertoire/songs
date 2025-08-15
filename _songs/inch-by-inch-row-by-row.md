@@ -5,6 +5,7 @@ title: "Inch by Inch, Row by Row"
 
 # Inch by Inch, Row by Row
 
+**Chorus:**  
 Inch by inch, row by row  
 Gonna make this garden grow  
 All you need is a rake and a hoe  
@@ -23,7 +24,7 @@ Find my way through nature's chain
 Tune my body and my brain  
 To the music of the land  
 
-Chorus  
+**Chorus**  
 
 Plant your rows straight and long  
 Temper them with prayer and song  
@@ -34,6 +35,6 @@ From his perch in yonder tree
 In my garden I’m as free  
 As that feathered thief up there  
 
-Chorus  
+**Chorus**  
 
 *Dave Mallet*
