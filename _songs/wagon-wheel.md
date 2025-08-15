@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Wagon Wheel"
+hidden: true
 ---
 
 # Wagon Wheel
