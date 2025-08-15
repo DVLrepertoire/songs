@@ -25,7 +25,7 @@ Gonna let my little light shine.
 
 **Chorus**  
 
-Monday gave me the gift of love,  
+Monday He gave me the gift of love,  
 Tuesday peace came from above,  
 Wednesday He told me to have more faith,  
 Thursday He gave me a little more grace,  
