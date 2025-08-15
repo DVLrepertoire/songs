@@ -10,6 +10,6 @@ title: Index
   {% for song in sorted_songs %}
   {% unless song.draft %}
     <li><a href="{{ song.url | relative_url }}">{{ song.title }}</a></li>
-  {% endfor %}
   {% endunless %}
+  {% endfor %}
 </ol>
