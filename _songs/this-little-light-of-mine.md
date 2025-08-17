@@ -4,7 +4,9 @@ title: "This Little Light of Mine"
 ---
 
 # This Little Light of Mine
+(Turn on your flashlight)
 
+**Chorus:**  
 This little light of mine,  
 I'm gonna let it shine.  
 This little light of mine,  
@@ -22,17 +24,17 @@ Shine my light both far and near,
 In every dark corner that I find,  
 Gonna let my little light shine.  
 
-Chorus  
+**Chorus**  
 
-Sunday gave me the gift of love,  
-Monday peace came from above,  
-Tuesday He told me to have more faith,  
-Wednesday He gave me a little more grace,  
-Thursday He told me to watch and pray,  
-Friday He told me just what to say  
-Saturday He gave me the power divine  
+Monday He gave me the gift of love,  
+Tuesday peace came from above,  
+Wednesday He told me to have more faith,  
+Thursday He gave me a little more grace,  
+Friday He told me to watch and pray,  
+Saturday He told me just what to say  
+On Sunday He gave me the power divine  
 Just to let my little light shine.  
 
-Chorus  
+**Chorus**  
 
 *Spiritual*

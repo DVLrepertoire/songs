@@ -11,6 +11,7 @@ Remember how we laughed away the hours
 And dreamed of all the great things  
 we would do  
 
+**Chorus:**  
 Those were the days my friend,  
 We'd thought they'd never end  
 We'd sing and dance forever and a day  

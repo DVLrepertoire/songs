@@ -30,7 +30,6 @@ with my friends
 And I can't wait to get on the road again  
 
 On the road again  
-On the road again  
 Like a band of gypsies  
 we go down the highway  
 We're the best of friends  

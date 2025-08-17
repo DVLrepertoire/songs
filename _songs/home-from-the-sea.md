@@ -18,8 +18,9 @@ For someone was waiting out there
 But each volunteer  
 Had to live with his fear  
 As they joined in a silent prayer  
+And carry us...  
 
-And carry them  
+**Chorus:**  
 Home, home, home from the sea  
 Angels of mercy, answer our plea  
 And carry us  
@@ -39,8 +40,9 @@ There she was on the crest of a wave
 She's an old fishing boat  
 And she's barely afloat  
 Please God, there are souls we can save  
+And carry them...  
 
-Chorus  
+**Chorus**  
 
 And back in the town  
 In a street that runs down  
@@ -48,13 +50,15 @@ To the sea and the harbor wall
 They'd gathered in pairs  
 At the foot of the stairs  
 To wait for the radio call  
+
 And just before dawn  
 When all hope was gone  
 Came hush and a faraway sound  
 'Twas the coxswain he roared  
 All survivors on board  
 Thank God and we're homeward bound  
+And carry us...  
 
-Chorus 2X  
+**Chorus**  
 
 *Phil Coulter*

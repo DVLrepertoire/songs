@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Woyaya"
+hidden: true
 ---
 
 # Woyaya

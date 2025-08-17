@@ -14,6 +14,7 @@ Though I’ve tried many times.
 Through smut and smoke and city noise,  
 The warm sun always shines.  
 
+**Chorus:**  
 On the Ha’Penny Bridge  
 you can stand in the sun  
 Watching couples stroll by, hand in hand.  
@@ -21,6 +22,8 @@ Buy a flower for your love
 from that old woman’s stall,  
 With a smile in for free;  
 Only you and your love understand.  
+
+**Chorus**  
 
 An old man sits on the Ha’Penny Bridge  
 His music box he plays.  
@@ -31,7 +34,7 @@ With a soft smile on his face,
 And watch the notes drift on the water  
 To some distant place.  
 
-CHORUS  
+**Chorus**  
 
 Each Sunday morning on the bridge  
 The children gather there.  
@@ -42,6 +45,6 @@ The stalls stand in a row.
 There’s fruit and flowers and singing birds;  
 Buy now before I go.  
 
-CHORUS  
+**Chorus**  
 
 *Makem Brothers*

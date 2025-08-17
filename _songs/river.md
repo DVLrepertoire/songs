@@ -15,6 +15,7 @@ Too quickly have faded on by
 But all of their memories linger on  
 Like the light in a fading sky  
 
+**Chorus:**  
 River, take me along in your sunshine, sing me a song  
 Ever moving and winding and free  
 You rolling old river,  
@@ -23,8 +24,7 @@ Let's you and me, river,
 run down to the sea  
 
 I've been to the city and back again  
-I've been moved by some things  
-that I've learned  
+I've been moved by some things that I've learned  
 Met a lot of good people and  
 I've called them friends  
 Felt the change when the seasons turned  
@@ -34,7 +34,7 @@ And listened to love's melodies
 I've felt my own music within me rise  
 Like the wind in the autumn trees  
 
-Chorus  
+**Chorus**  
 
 Someday when the flowers are blooming still  
 Someday when the grass is still green  
@@ -47,6 +47,6 @@ And here's to the friends that I know
 And here's to the song that's within me now  
 I will sing it wherever I go  
 
-Chorus  
+**Chorus**  
 
 *Bill Staines*

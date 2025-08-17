@@ -10,6 +10,7 @@ We rambled round in the hard ol' days
 He never cared if I had no dough  
 We rambled round in the rain and snow  
 
+**Chorus:**  
 So here's to you my ramblin' boy  
 May all your ramblin’ bring you joy  
 So here's to you my ramblin' boy  
@@ -20,14 +21,20 @@ We thought we'd try to work one day
 The boss says he had room for one  
 Says my old pal, "We'd rather bum"  
 
+**Chorus**  
+
 Late one night in a jungle camp  
 The weather it was cold and damp  
 He got the chills, and he got them bad  
 They took the only friend I had  
 
+**Chorus**  
+
 He left me here to ramble on  
 My ramblin' pal is dead and gone  
 If when we die we go somewhere  
 I'll bet you a dollar he's ramblin' there  
+
+**Chorus**  
 
 *Tom Paxton*

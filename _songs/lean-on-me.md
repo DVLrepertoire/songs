@@ -5,6 +5,7 @@ title: "Lean On Me"
 
 # Lean On Me
 
+**Chorus:**  
 Lean on me,  
 when you're not strong  
 And I'll be your friend  

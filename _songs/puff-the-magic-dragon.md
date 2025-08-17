@@ -12,13 +12,14 @@ Little Jackie Paper loved that rascal Puff
 And brought him strings and sealing wax  
 and other fancy stuff, oh  
 
+**Chorus:**  
 Puff, the magic dragon, lived by the sea  
 And frolicked in the autumn mist  
 in a land called Honalee.  
 Puff, the magic dragon, lived by the sea  
 And frolicked in the autumn mist  
+in a land called Honalee.  
 
-in a land called Honalee.  
 Together they would travel  
 on boat with billowed sail  
 Jackie kept a lookout perched on Puff's gigantic tail  
@@ -27,7 +28,7 @@ would bow whene'er they came
 Pirate ships would lower their flags  
 when Puff roared out his name, oh  
 
-Puff, the magic dragon, lived . . .  
+**Chorus**  
 
 A dragon lives forever, but not so little boys  
 Painted wings and giant’s rings  
@@ -44,6 +45,6 @@ Without his lifelong friend, Puff could not be brave
 So, Puff that mighty dragon  
 sadly slipped into his cave, oh  
 
-Puff, the magic dragon, lived . . .  
+**Chorus**  
 
 *Peter Yarrow and Leonard Lipton*

@@ -27,13 +27,6 @@ Well that's just not my nature
 to sit around feeling sad  
 We're only here for awhile so why not smile hey, living ain't all that bad  
 
-Chorus  
-
-When I look around there's lots of folks  
-worse off than me  
-So I just thank the good Lord  
-and ask Him please  
-
 Give me one more shot  
 I'll give it all I've got  
 "Let me open my eyes to a new sunrise", I pray  

@@ -15,6 +15,7 @@ Till we found the sea of green
 And we lived beneath the waves  
 In our yellow submarine  
 
+**Chorus:**  
 We all live in a yellow submarine  
 Yellow submarine, yellow submarine  
 
@@ -22,13 +23,13 @@ And our friends are all on board
 Many more of them live next door  
 And the band begins to play  
 
-Chorus  
+**Chorus**  
 
 As we live a life of ease  
 Everyone of us has all we need  
 Sky of blue and sea of green  
 In our yellow submarine  
 
-Chorus  
+**Chorus**  
 
 *John Lennon, Paul McCartney*

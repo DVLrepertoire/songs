@@ -12,6 +12,7 @@ Life is old there, older than the trees
 Younger than the mountains,  
 Blowing like a breeze  
 
+**Chorus:**  
 Country Roads, Take me home  
 To the place I belong  
 West Virginia, Mountain Momma  
@@ -23,10 +24,7 @@ Dark and dusty, painted on the sky
 Misty taste of moonshine,  
 Teardrop in my eye  
 
-Country Roads, Take me home  
-To the place I belong  
-West Virginia, Mountain Momma  
-Take me home, Country Roads  
+**Chorus**  
 
 I hear her voice  
 In the morning hours she calls me  
@@ -36,14 +34,6 @@ In driving down the road I get a feeling
 That I shoulda been home  
 yesterday, yesterday  
 
-Country Roads, take me home  
-To the place I belong  
-West Virginia, Mountain Momma  
-Take me home, Country Roads  
-
-Country Roads, take me home  
-To the place I belong  
-West Virginia, Mountain Momma  
-Take me home, Country Roads  
+**Chorus x2**  
 
 John Denver
