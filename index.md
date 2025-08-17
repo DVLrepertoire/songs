@@ -2,7 +2,13 @@
 layout: default
 title: Index
 ---
-
+<div id="chord-toggle-container">
+  <label class="switch">
+    <input type="checkbox" id="global-chord-toggle">
+    <span class="slider"></span>
+  </label>
+  <span>Instrument mode</span>
+</div>
 ## Index
 
 <ol>
