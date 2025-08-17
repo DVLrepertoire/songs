@@ -40,103 +40,88 @@
             display: block;
             white-space: pre;
             line-height: 1.2;
-            font-family: monospace; /* Use a monospace font for consistent spacing */
           }
-          .chord-line {
+          .chord {
+            color: #d12a2a;
             font-weight: bold;
-            color: #d12a2a; /* Make the chords stand out */
+            display: inline-block;
+            min-width: 1em;
+            text-align: center;
           }
-          .processed-line {
-            margin-bottom: 1em;
+          .lyric-char {
+            display: inline-block;
+            min-width: 1ch;
           }
-          /* Hide chords by default */
-          .chord-line {
+          body:not(.show-chords) .chord-line {
             display: none;
           }
-          /* This class is added to the body by the button click */
           body.show-chords .chord-line {
             display: block;
+          }
+          body.show-chords .lyric-line {
+            margin-bottom: 0.5em;
           }
         `;
         document.head.appendChild(style);
 
-        // Regex to find chords and the text following them.
-        const chordAndTextRegex = /(\[([^\]]+)\])([^\[]*)/g;
-        // Regular expression to find both chords and directives to check for their existence.
-        const chordproRegex = /(\[([^\]]+)\])|(\{([^\}]+)\})/g;
+        // Regular expression to find text with chords in square brackets
+        const chordRegex = /\[([^\\]]+)\]/g;
+        const hasChordsOnPage = chordRegex.test(songContent.innerHTML);
 
-        // Check if the content has any chords or directives.
-        const hasChordsOnPage = chordproRegex.test(songContent.innerHTML);
-
-        // Function to process the content and reformat it for inline chords.
         const processContent = () => {
-          const paragraphs = songContent.querySelectorAll('p');
-          paragraphs.forEach(p => {
-            const originalText = p.innerHTML;
-            const lines = originalText.split(/\r?\n/);
-            let newHtml = '';
+          // Reset the innerHTML to its original state before processing
+          const originalContent = songContent.innerHTML;
+          songContent.innerHTML = originalContent.replace(chordRegex, '');
+
+          // Find all text nodes that have content to process
+          const nodesToProcess = [];
+          const walker = document.createTreeWalker(songContent, NodeFilter.SHOW_TEXT, null, false);
+          let node;
+          while (node = walker.nextNode()) {
+            if (node.nodeValue.trim().length > 0) {
+              nodesToProcess.push(node);
+            }
+          }
+
+          nodesToProcess.forEach(node => {
+            const lines = node.nodeValue.split('\n');
+            const newDiv = document.createElement('div');
+            newDiv.classList.add('processed-content');
 
             lines.forEach(line => {
-              // Remove all {directive} from the line
-              const cleanLine = line.replace(/\{[^}]+\}/g, '');
-              if (/\[[^\]]+\]/.test(cleanLine)) {
-                // Line has chords, process as before
-                let result = '';
-                let i = 0;
-                while (i < cleanLine.length) {
-                  if (cleanLine[i] === '[') {
-                    const end = cleanLine.indexOf(']', i);
-                    if (end !== -1) {
-                      const chord = cleanLine.slice(i + 1, end);
-                      const nextChar = cleanLine[end + 1];
-                      if (nextChar && nextChar !== ' ') {
-                        result += `<span class="chord-stack"><span class="chord">${chord}</span><span class="lyric-char">${nextChar}</span></span>`;
-                        i = end + 2;
-                      } else {
-                        result += `<span class="chord-stack"><span class="chord">${chord}</span><span class="lyric-char"></span></span>`;
-                        i = end + 1;
-                      }
-                      continue;
+              const chordMatch = line.match(chordRegex);
+              if (chordMatch) {
+                const chordLine = document.createElement('div');
+                chordLine.classList.add('chord-line');
+                let currentChord = '';
+
+                // Add chords
+                for (let i = 0; i < line.length; i++) {
+                  const char = line[i];
+                  if (char === '[') {
+                    const endIndex = line.indexOf(']', i);
+                    if (endIndex > i) {
+                      currentChord += line.substring(i + 1, endIndex);
+                      i = endIndex;
                     }
+                  } else {
+                    currentChord += ' ';
                   }
-                  result += `<span class="lyric-char">${cleanLine[i]}</span>`;
-                  i++;
                 }
-                newHtml += `<div class="processed-line"><span class="lyric-line">${result}</span></div>`;
-              } else {
-                // No chords: preserve original HTML (including italics, etc.), but remove directives
-                if (cleanLine.trim() !== '') {
-                  newHtml += `<div class="processed-line lyric-only-line">${cleanLine}</div>`;
-                }
+                chordLine.textContent = currentChord.trim();
+                newDiv.appendChild(chordLine);
               }
+
+              // Add lyric line
+              const lyricLine = document.createElement('div');
+              lyricLine.classList.add('lyric-line');
+              lyricLine.textContent = line.replace(chordRegex, '');
+              newDiv.appendChild(lyricLine);
             });
 
-            p.innerHTML = newHtml;
+            node.parentNode.replaceChild(newDiv, node);
           });
         };
-
-        // --- Chord visibility persistence ---
-        function setChordVisibility(show) {
-          if (show) {
-            document.body.classList.add('show-chords');
-          } else {
-            document.body.classList.remove('show-chords');
-          }
-        }
-
-        // On every page load, set chord visibility from localStorage
-        const showChords = localStorage.getItem('showChords') === 'true';
-        setChordVisibility(showChords);
-
-        // If the slider exists (on the home page), sync it and listen for changes
-        const globalToggle = document.getElementById('global-chord-toggle');
-        if (globalToggle) {
-          globalToggle.checked = showChords;
-          globalToggle.addEventListener('change', (e) => {
-            localStorage.setItem('showChords', e.target.checked);
-            setChordVisibility(e.target.checked);
-          });
-        }
 
         if (hasChordsOnPage) {
           // If chords are found, make the toggle button visible and process content.
@@ -162,7 +147,7 @@
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/service-worker.js', { scope: '/' })
+          navigator.serviceWorker.register('{{ "/service-worker.js" | relative_url }}', { scope: '{{ "/" | relative_url }}' })
             .then(registration => {
               console.log('Service Worker registered: ', registration);
             })
@@ -173,5 +158,4 @@
       }
     </script>
   </body>
-
 </html>
