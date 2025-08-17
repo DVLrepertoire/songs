@@ -1,23 +1,20 @@
 ---
 ---
 
-// Add this line to import the new color module
-@use "sass:color";
+// Minima theme's styles using the old `@import` rule for compatibility.
+@import "minima";
 
-// Import the Minima theme's styles using the new Sass `@use` rule.
-@use "minima";
-
-// Fix for Minima's font not loading correctly
-// Minima defines its font families using CSS variables. We will manually set them here.
+// Fix for Minima's font not loading correctly.
+// Minima defines its font families using CSS variables. We manually set them here.
 :root {
   --minima-font-family-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
-// Override the Minima theme's color variables to use the new Sass functions.
-// This resolves the `lighten()` and `darken()` deprecation warnings.
+// Override the Minima theme's color variables to use the older Sass functions.
+// This resolves the build error on GitHub Pages.
 $grey-color: #828282;
-$grey-color-light: color.adjust($grey-color, $lightness: 40%);
-$grey-color-dark: color.adjust($grey-color, $lightness: -25%);
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark: darken($grey-color, 25%);
 
 /* === Your Custom styles === */
 
@@ -72,7 +69,7 @@ p em {
   color: #333;
   border: 1px solid #ccc;
   border-radius: 5px;
-  padding: 4px 8px;
+  padding: 8px 16px;
   cursor: pointer;
   font-size: 1rem;
   display: none; /* Hidden by default, shown by JavaScript if chords are present */
@@ -87,7 +84,7 @@ p em {
   display: none;
   color: #888;
   font-weight: bold;
-  font-family: monospace;
+  font-family: inherit; /* This will inherit the font from the body */
   white-space: pre; /* Preserves spaces for chord alignment */
 }
 
@@ -96,120 +93,25 @@ body.show-chords .chord-line {
   display: block;
 }
 
-.processed-line {
-  margin-bottom: 0.2em; // Reduce default spacing
-}
-
 /* The lyric line also uses pre-wrap to preserve spacing */
 .lyric-line {
   white-space: pre-wrap;
-  margin-bottom: 0;
-  font-family: monospace;
-  line-height: 1.2;
-}
-
-.lyric-only-line {
-  font-family: inherit;
-  white-space: normal;
-  margin-bottom: 0.2em;
-  line-height: 1.2;
+  margin-bottom: 0.5em;
+  font-family: inherit; /* This will inherit the font from the body */
 }
 
 /* Spacing between chords and lyrics */
-.chord-stack {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  width: auto;
-  min-width: 0;
-  vertical-align: bottom;
-  padding: 0;
-  margin: 0;
-}
-
 .chord {
-  font-size: 0.8em;
-  color: #d12a2a;
-  font-weight: bold;
-  line-height: 1;
-  margin-bottom: -0.2em;
-  padding: 0;
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.lyric-char {
-  line-height: 1.2;
-  width: 1ch;
-  min-width: 0;
   display: inline-block;
-  padding: 0;
+  min-width: 1em; /* Ensure some spacing for chords */
+  text-align: center;
   margin: 0;
+  padding: 0;
+  font-family: inherit;
 }
 
-body.show-chords .chord {
-  display: block;
-}
-
-body:not(.show-chords) .chord {
-  display: none;
-}
-
-// Only add extra spacing when chords are visible
-body.show-chords .processed-line {
-  margin-bottom: 0.5em;
-}
-
-body.show-chords .lyric-line {
-  margin-bottom: 0.5em;
-}
-
-#chord-toggle-container {
-  display: flex;
-  align-items: center;
-  gap: 0.5em;
-  margin-bottom: 1em;
-  margin-top: 0.1em; // Less space at top
-}
-
-.switch {
-  position: relative;
+.lyric-space {
   display: inline-block;
-  width: 32px;
-  height: 18px;
-}
-
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-color: #ccc;
-  transition: .2s;
-  border-radius: 18px;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 12px;
-  width: 12px;
-  left: 3px;
-  bottom: 3px;
-  background-color: white;
-  transition: .2s;
-  border-radius: 50%;
-}
-
-input:checked + .slider {
-  background-color: #2196F3;
-}
-
-input:checked + .slider:before {
-  transform: translateX(14px);
+  min-width: 1em;
+  text-align: center;
 }
