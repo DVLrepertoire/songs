@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DVL Songs</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="manifest" href="./manifest.json" />
+  <meta name="theme-color" content="#2196F3" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrapper">
+      <a class="site-title" href="#/">Home</a>
+      <div id="instrument-toggle" class="toggle-wrap" title="Show chords by default">
+        <label class="switch" for="instrumentMode" aria-label="Instrument mode">
+          <input type="checkbox" id="instrumentMode" />
+          <span class="slider"></span>
+        </label>
+        <span>Instrument mode</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-content">
+    <div class="wrapper" id="app"></div>
+  </main>
+
+  <script src="./app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./service-worker.js').catch(console.warn);
+      });
+    }
+  </script>
+</body>
+</html>

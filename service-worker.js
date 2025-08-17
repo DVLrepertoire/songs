@@ -1,56 +1,56 @@
-const CACHE_NAME = 'song-repertoire-cache-v1';
-const urlsToCache = [
-  '/',
-  '/index.html', // This is the rendered version of index.md
-  '/assets/main.css', // This is the compiled CSS file
-  '/manifest.json',
-  // Example of a cached song page. We use the permalink structure.
-  '/songs/a-place-in-the-choir/',
-  // The files below are needed for offline functionality
-  '/assets/images/icon-192x192.png',
-  '/assets/images/icon-512x512.png'
+const CACHE = 'songs-v2';
+const CORE_ASSETS = [
+  './',
+  './index.html',
+  './style.css',
+  './app.js',
+  './manifest.json',
+  './songs.json'
 ];
 
-// Install event: caches the core assets
+// Install: cache core + song files from songs.json
 self.addEventListener('install', event => {
-  event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then(cache => {
-        console.log('Opened cache');
-        // Add all specified URLs to the cache.
-        return cache.addAll(urlsToCache);
-      })
-  );
+  event.waitUntil((async () => {
+    const cache = await caches.open(CACHE);
+    await cache.addAll(CORE_ASSETS);
+
+    // try to precache songs listed in songs.json (ignore failures)
+    try {
+      const res = await fetch('./songs.json', { cache: 'no-cache' });
+      const list = await res.json();
+      const urls = list.map(s => `./songs/${s.file}`);
+      await cache.addAll(urls);
+    } catch (e) {}
+  })());
+  self.skipWaiting();
 });
 
-// Fetch event: serves cached content
-self.addEventListener('fetch', event => {
-  event.respondWith(
-    caches.match(event.request)
-      .then(response => {
-        // Return cached response if found.
-        if (response) {
-          return response;
-        }
-        // Otherwise, fetch from the network.
-        return fetch(event.request);
-      })
-  );
-});
-
-// Activate event: deletes old caches
+// Activate: clean old caches
 self.addEventListener('activate', event => {
-  const cacheWhitelist = [CACHE_NAME];
-  event.waitUntil(
-    caches.keys().then(cacheNames => {
-      return Promise.all(
-        cacheNames.map(cacheName => {
-          if (cacheWhitelist.indexOf(cacheName) === -1) {
-            // Delete any caches not in the whitelist.
-            return caches.delete(cacheName);
-          }
-        })
-      );
-    })
-  );
+  event.waitUntil((async () => {
+    const keys = await caches.keys();
+    await Promise.all(keys.filter(k => k !== CACHE).map(k => caches.delete(k)));
+  })());
+  self.clients.claim();
 });
+
+// Fetch: cache-first for same-origin requests
+self.addEventListener('fetch', event => {
+  const url = new URL(event.request.url);
+  if (url.origin === location.origin) {
+    event.respondWith(cacheFirst(event.request));
+  }
+});
+
+async function cacheFirst(req) {
+  const cache = await caches.open(CACHE);
+  const cached = await cache.match(req);
+  if (cached) return cached;
+  try {
+    const fresh = await fetch(req);
+    cache.put(req, fresh.clone());
+    return fresh;
+  } catch (e) {
+    return cached || new Response('Offline', { status: 503, statusText: 'Offline' });
+  }
+}

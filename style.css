@@ -1,0 +1,78 @@
+:root { --blue:#1a73e8; --text:#111; --muted:#666; }
+* { box-sizing: border-box; }
+body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color:var(--text); }
+.wrapper { max-width: 920px; margin: 0 auto; padding: 1.2rem; }
+
+/* Default knobs (work okay everywhere) */
+:root{
+  --anchor-nudge-x: -0.02em;   /* kerning compensation */
+  --anchor-nudge-y: 0.05em;   /* baseline correction */
+}
+
+/* Platform-specific tweaks */
+.font-win   { --anchor-nudge-x: -0.022em; --anchor-nudge-y: -0.055em; }  /* Windows / Segoe UI */
+.font-mac   { --anchor-nudge-x: -0.018em; --anchor-nudge-y: -0.045em; }  /* macOS / SF */
+.font-ios   { --anchor-nudge-x: -0.018em; --anchor-nudge-y: -0.045em; }  /* iOS / SF */
+.font-android{--anchor-nudge-x: -0.016em; --anchor-nudge-y: -0.042em; }  /* Android / Roboto */
+.font-linux { --anchor-nudge-x: -0.020em; --anchor-nudge-y: -0.050em; }  /* Ubuntu/DejaVu/etc. */
+
+
+.site-header { border-bottom:1px solid #eee; position:sticky; top:0; background:#fff; z-index:10; }
+.site-header .wrapper { display:flex; align-items:center; gap:1rem; }
+.site-title { font-size:1.3rem; font-weight:600; text-decoration:none; color:var(--text); }
+.site-title:hover { color:var(--blue); }
+
+.toggle-wrap { margin-left:auto; display:flex; align-items:center; gap:.6rem; color:var(--muted); }
+.switch { position:relative; display:inline-block; width:46px; height:24px; }
+.switch input { display:none; }
+.slider { position:absolute; cursor:pointer; inset:0; background:#ccc; transition:.2s; border-radius:999px; }
+.slider:before { position:absolute; content:""; height:18px; width:18px; left:3px; top:3px; background:white; transition:.2s; border-radius:50%; }
+input:checked + .slider { background:var(--blue); }
+input:checked + .slider:before { transform:translateX(22px); }
+
+h1,h2 { margin:.6rem 0 1rem; }
+ol { padding-left:1.2rem; }
+a { color:var(--blue); text-decoration:none; }
+a:hover { text-decoration:underline; }
+
+.controls { display:flex; gap:.5rem; align-items:center; margin: .5rem 0 1rem; }
+button { padding:.5rem .8rem; border-radius:.6rem; border:1px solid #ddd; background:#f8f8f8; cursor:pointer; }
+button:hover { background:#f0f0f0; }
+
+.song { line-height:1.7; font-size:1.05rem; }
+.line { display:block; margin: .15rem 0; white-space:pre-wrap; }
+/* Preserve stanza spacing */
+.line.blank { height: 0.9rem; } /* adjust to taste (e.g., 1.2rem) */
+
+/* Tuning knobs for the anchored character */
+:root{
+  /* Pull the anchored char slightly left to compensate lost kerning */
+  --anchor-nudge-x: -0.02em;   /* try -0.015em .. -0.03em to taste */
+  /* Drop the anchored char a touch so its baseline matches neighbors */
+  --anchor-nudge-y: -0.05em;   /* try -0.03em .. -0.08em if needed */
+}
+
+/* Anchored-char wrapper */
+.seg{
+  display:inline-block;
+  vertical-align: var(--anchor-nudge-y);  /* baseline correction */
+  text-align:center;
+  margin:0;
+  padding:0;
+  margin-left: var(--anchor-nudge-x);     /* kerning compensation */
+}
+
+/* Don’t pull the very first char on the line */
+.line .seg:first-child{ margin-left:0; }
+
+/* Chord above, keep it tight */
+.seg .chord{ display:block; font-weight:700; line-height:1; }
+
+/* IMPORTANT: keep the lyric as inline so it participates in normal text flow */
+.seg .lyric{ display:inline; }
+
+/* Already good: stanza spacing and hide-chords behavior */
+.line.blank{ height:0.9rem; }
+body.hide-chords .seg .chord{ visibility:hidden; height:0; margin:0; padding:0; }
+.meta { color:var(--muted); font-size:.9rem; margin-bottom:.5rem; }
+.empty { color:var(--muted); }

@@ -1,8 +1,0 @@
-markdown: kramdown
-theme: minima
-title: Home
-
-collections:
-  songs:
-    output: true
-    permalink: /songs/:name/

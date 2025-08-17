@@ -4,7 +4,7 @@ title: "A Place In The Choir"
 ---
 # A Place In The Choir
 
-Chorus:
+**Chorus:**
 
 {start_of_chorus}
 [G]All God's creatures got a place in the choir
@@ -22,7 +22,7 @@ Where the [D]bullfrog croaks and the [G]hippopotamus
 And the [D]old cow just goes [G]moo
 {end_of_verse}
 
-Chorus
+**Chorus**
 
 {start_of_verse}
 [G]Dogs and the cats they take up the middle
@@ -31,7 +31,7 @@ The [C]donkey brays and the [G]pony neighs
 And the [D]old grey badger [G]sighs
 {end_of_verse}
 
-Chorus
+**Chorus**
 
 {start_of_verse}
 [G]Listen to the top where the little bird sings
@@ -40,7 +40,7 @@ And the [C]hoot owl cries over [G]everything
 And the [D]blackbird disa[G]grees
 {end_of_verse}
 
-Chorus
+**Chorus**
 
 {start_of_verse}
 [G]Singin' in the night time, singin' in the day
@@ -49,7 +49,7 @@ And the [C]otter hasn't got [G]much to say
 And the [D]porcupine talks to him[G]self
 {end_of_verse}
 
-Chorus
+**Chorus**
 
 {start_of_verse}
 It's a [G]simple song of livin' sung everywhere
