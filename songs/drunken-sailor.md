@@ -8,7 +8,7 @@ title: "Drunken Sailor"
 [Em]What will we do with a drunken sailor?
 [D]What will we do with a drunken sailor?
 [Em]What will we do with a drunken sailor?
-[Em]Early [D]in the morn-[Em]ing
+[Em]Early [D]in the [Em]morning
 {end_of_verse}
 
 Chorus:
