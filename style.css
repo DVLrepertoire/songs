@@ -10,11 +10,11 @@ body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial,
 }
 
 /* Platform-specific tweaks */
-.font-win   { --anchor-nudge-x: -0.022em; --anchor-nudge-y: -0.055em; }  /* Windows / Segoe UI */
-.font-mac   { --anchor-nudge-x: -0.018em; --anchor-nudge-y: -0.045em; }  /* macOS / SF */
-.font-ios   { --anchor-nudge-x: -0.018em; --anchor-nudge-y: -0.045em; }  /* iOS / SF */
-.font-android{--anchor-nudge-x: -0.016em; --anchor-nudge-y: -0.042em; }  /* Android / Roboto */
-.font-linux { --anchor-nudge-x: -0.020em; --anchor-nudge-y: -0.050em; }  /* Ubuntu/DejaVu/etc. */
+.font-win   { --anchor-nudge-x: -0.022em; --anchor-nudge-y: -0.055em; --chord-gap: 0.10em; }  /* Windows / Segoe UI */
+.font-mac   { --anchor-nudge-x: -0.018em; --anchor-nudge-y: -0.045em; --chord-gap: 0.12em; }  /* macOS / SF */
+.font-ios   { --anchor-nudge-x: -0.018em; --anchor-nudge-y: -0.045em; --chord-gap: 0.12em; }  /* iOS / SF */
+.font-android{--anchor-nudge-x: -0.016em; --anchor-nudge-y: -0.042em; --chord-gap: 0.11em; }  /* Android / Roboto */
+.font-linux { --anchor-nudge-x: -0.020em; --anchor-nudge-y: -0.050em; --chord-gap: 0.13em; }  /* Ubuntu/DejaVu/etc. */
 
 
 .site-header { border-bottom:1px solid #eee; position:sticky; top:0; background:#fff; z-index:10; }
@@ -50,29 +50,48 @@ button:hover { background:#f0f0f0; }
   --anchor-nudge-x: -0.02em;   /* try -0.015em .. -0.03em to taste */
   /* Drop the anchored char a touch so its baseline matches neighbors */
   --anchor-nudge-y: -0.05em;   /* try -0.03em .. -0.08em if needed */
+  /* Distance between lyric and chord (tuneable) */
+  --chord-gap: 0.12em; /* try 0.08em .. 0.18em to taste */
+  /* Vertical space reserved above a line to fit chords (height of chord text) */
+  --chord-offset: 1.05em; /* tune this if chords overlap (approx chord font-size) */
 }
 
 /* Anchored-char wrapper */
 .seg{
   display:inline-block;
-  vertical-align: var(--anchor-nudge-y);  /* baseline correction */
+  position:relative;                 /* create containing block for absolute chord */
+  vertical-align:baseline;           /* keep lyric baseline stable */
   text-align:center;
   margin:0;
   padding:0;
-  margin-left: var(--anchor-nudge-x);     /* kerning compensation */
+  /* Use transform to nudge the anchored char rather than adding margin that creates gaps */
+  transform: translateX(var(--anchor-nudge-x)) translateY(var(--anchor-nudge-y));
 }
 
-/* Don’t pull the very first char on the line */
-.line .seg:first-child{ margin-left:0; }
+/* First anchored char on a line: don't apply the horizontal nudge */
+.line .seg:first-child{ transform: none; }
 
-/* Chord above, keep it tight */
-.seg .chord{ display:block; font-weight:700; line-height:1; }
+/* Chord above, absolutely positioned so it doesn't affect inline flow */
+.seg .chord{
+  position:absolute;
+  left:50%;
+  transform: translateX(-50%);
+  bottom: calc(100% + var(--chord-gap)); /* place above the lyric; tune with --chord-gap */
+  font-weight:700;
+  line-height:1;
+  white-space:nowrap;
+}
 
-/* IMPORTANT: keep the lyric as inline so it participates in normal text flow */
+/* Keep the lyric as inline so it participates in normal text flow */
 .seg .lyric{ display:inline; }
 
 /* Already good: stanza spacing and hide-chords behavior */
 .line.blank{ height:0.9rem; }
-body.hide-chords .seg .chord{ visibility:hidden; height:0; margin:0; padding:0; }
+body.hide-chords .seg .chord{ display:none; }
+.song.chorded .line.has-chord{ padding-top: calc(var(--chord-gap) + var(--chord-offset)); }
+.song.chorded .line.has-chord:first-child{ padding-top: calc(var(--chord-gap) + var(--chord-offset)); }
+.song.chorded .line.has-chord .seg .chord{ visibility:visible; }
+/* When chords are hidden remove the extra padding */
+body.hide-chords .song.chorded .line.has-chord{ padding-top:0; }
 .meta { color:var(--muted); font-size:.9rem; margin-bottom:.5rem; }
 .empty { color:var(--muted); }

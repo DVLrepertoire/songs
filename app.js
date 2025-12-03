@@ -238,7 +238,7 @@ function parseChordPro(text) {
     }
     flush();
 
-    out.push(`<div class="line">${segHtml}</div>`);
+    out.push(`<div class="line has-chord">${segHtml}</div>`);
   }
 
   return { html: out.join(''), meta, hasChords };
