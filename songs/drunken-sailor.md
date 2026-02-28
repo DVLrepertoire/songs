@@ -11,7 +11,7 @@ title: "Drunken Sailor"
 [Em]Early [D]in the [Em]morning
 {end_of_verse}
 
-Chorus:
+**Chorus:**
 {start_of_chorus}
 [Em]Hoo-ray and up she rises
 [D]Hoo-ray and up she rises
@@ -19,7 +19,7 @@ Chorus:
 [Em]Early [D]in the [Em]morning
 {end_of_chorus}
 
-Chorus
+**Chorus**
 
 {start_of_verse}
 [Em]Put him in a long boat till he's sober
@@ -28,7 +28,7 @@ Chorus
 [Em]Early [D]in the [Em]morning
 {end_of_verse}
 
-Chorus
+**Chorus**
 
 {start_of_verse}
 [Em]Shave his belly with a rusty razor
@@ -37,7 +37,7 @@ Chorus
 [Em]Early [D]in the [Em]morning
 {end_of_verse}
 
-Chorus
+**Chorus**
 
 {start_of_verse}
 [Em]Stick him in a scupper with a hosepipe bottom
@@ -46,7 +46,7 @@ Chorus
 [Em]Early [D]in the [Em]morning
 {end_of_verse}
 
-Chorus
+**Chorus**
 
 {start_of_verse}
 [Em]That's what we do with a drunken sailor
@@ -55,6 +55,6 @@ Chorus
 [Em]Early [D]in the [Em]morning
 {end_of_verse}
 
-Chorus
+**Chorus**
 
 *Traditional*

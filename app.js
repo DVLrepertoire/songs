@@ -124,124 +124,36 @@ async function renderSong(file) {
     raw = await res.text();
   } catch (e) {
     app.innerHTML = `
-      <div class="controls">
-        <button onclick="location.hash='#/'">← Back</button>
-      </div>
       <h2>Not found</h2>
-      <p class="empty">Couldn’t load <code>${escapeHtml(file)}</code>.</p>
+      <p class="empty">Couldn’t load <code>${file}</code>.</p>
     `;
     console.error('Failed to load song:', file, e);
     return;
   }
 
-  const parsed = parseChordPro(raw);
+  const { body, fm } = extractFrontMatter(raw);
+  const parser = new ChordSheetJS.ChordProParser();
+  const song = parser.parse(body);
+  const formatter = new ChordSheetJS.HtmlDivFormatter();
+  const htmlContent = formatter.format(song);
+
+  // Post-process HTML to render markdown in lyrics
+  const tempDiv = document.createElement('div');
+  tempDiv.innerHTML = htmlContent;
+  tempDiv.querySelectorAll('.lyrics').forEach(lyricsEl => {
+    lyricsEl.innerHTML = mdInline(lyricsEl.textContent);
+  });
+  const processedHtmlContent = tempDiv.innerHTML;
 
   // Set chord visibility from the global Instrument mode
   document.body.classList.toggle('hide-chords', !getMode());
   if (toggle) toggle.checked = getMode(); // keep the header checkbox in sync
 
   app.innerHTML = `
-    <div class="controls">
-      <button onclick="location.hash='#/'">← Back</button>
-    </div>
-    ${parsed.meta.title ? `<h1>${parsed.meta.title}</h1>` : ''}
-    ${parsed.meta.key ? `<div class="meta">Key: ${parsed.meta.key}</div>` : ''}
-    <div class="song ${parsed.hasChords ? 'chorded' : ''}" id="songContainer">${parsed.html}</div>
+    ${fm.title || song.title ? `<h1>${fm.title || song.title}</h1>` : ''}
+    ${fm.key ? `<div class="meta">Key: ${fm.key}</div>` : ''}
+    <div class="song chorded" id="songContainer">${processedHtmlContent}</div>
   `;
-}
-
-// ---------- ChordPro parser (front-matter + markdown inline; anchored-char only) ----------
-function parseChordPro(text) {
-  const { body, fm } = extractFrontMatter(text);
-  const lines = body.replace(/\r\n?/g, '\n').split('\n');
-
-  const meta = {};
-  if (fm.title) meta.title = fm.title;
-  if (fm.key)   meta.key   = fm.key;
-
-  const out = [];
-  let hasChords = false;
-
-  for (let rawLine of lines) {
-    let line = rawLine;
-
-    // H1 → title (don’t duplicate in body)
-    const h1 = line.match(/^\s*#\s+(.*)$/);
-    if (h1) {
-      if (!meta.title) meta.title = h1[1].trim();
-      continue;
-    }
-
-    // H2..H6
-    const hx = line.match(/^\s*(#{2,6})\s+(.*)$/);
-    if (hx) {
-      const level = hx[1].length;
-      out.push(`<h${level}>${mdInline(hx[2].trim())}</h${level}>`);
-      continue;
-    }
-
-    // Directive-only line {key: G} etc. → capture, hide
-    const dirOnly = line.trim().match(/^\{([^}]+)\}$/);
-    if (dirOnly) {
-      const [k, v] = dirOnly[1].split(/\s*:\s*/);
-      if (k && v) meta[k.trim().toLowerCase()] = v.trim();
-      continue;
-    }
-
-    // Strip inline directives
-    line = line.replace(/\{[^}]+\}/g, '');
-
-    // Preserve blank lines as stanza breaks
-    if (/^\s*$/.test(line)) {
-      out.push('<div class="line blank">&nbsp;</div>');
-      continue;
-    }
-
-    // No chords → markdown inline
-    if (!/\[[^\]]+\]/.test(line)) {
-      out.push(`<div class="line">${mdInline(line)}</div>`);
-      continue;
-    }
-
-    // Chords present: wrap ONLY the anchored character; keep other text as normal runs
-    hasChords = true;
-
-    let i = 0;
-    let buf = '';
-    let segHtml = '';
-
-    const flush = () => {
-      if (buf) { segHtml += mdInline(buf); buf = ''; }
-    };
-
-    while (i < line.length) {
-      if (line[i] === '[') {
-        const end = line.indexOf(']', i);
-        if (end !== -1) {
-          const chord = line.slice(i + 1, end);
-          const next = line[end + 1] ?? '';
-
-          flush(); // output text before the chord
-
-          if (next && next !== '[') {
-            segHtml += `<span class="seg"><span class="chord">${escapeHtml(chord)}</span><span class="lyric">${escapeHtml(next)}</span></span>`;
-            i = end + 2; // consumed the char after ]
-          } else {
-            segHtml += `<span class="seg"><span class="chord">${escapeHtml(chord)}</span><span class="lyric">&nbsp;</span></span>`;
-            i = end + 1;
-          }
-          continue;
-        }
-      }
-      buf += line[i];
-      i++;
-    }
-    flush();
-
-    out.push(`<div class="line has-chord">${segHtml}</div>`);
-  }
-
-  return { html: out.join(''), meta, hasChords };
 }
 
 // ---------- Helpers ----------

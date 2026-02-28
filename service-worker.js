@@ -1,11 +1,12 @@
-const CACHE = 'songs-v2';
+const CACHE = 'songs-v4'; // Increment version number when core assets change
 const CORE_ASSETS = [
   './',
   './index.html',
   './style.css',
   './app.js',
   './manifest.json',
-  './songs.json'
+  './songs.json',
+  './lib/bundle.js'
 ];
 
 // Install: cache core + song files from songs.json

@@ -15,6 +15,7 @@ Picking me a bouquet of dogwood flowers
 And I'm a-hopin' for Raleigh,  
 I can see my baby tonight  
 
+**Chorus:**
 So rock me momma like a wagon wheel  
 Rock me momma any way you feel  
 Hey momma rock me  
@@ -33,7 +34,7 @@ so I had to leave town
 But I ain't turning back  
 to living that old life no more  
 
-Chorus 
+**Chorus**
 
 Walkin' to the south out of Roanoke  
 I caught a trucker out of Philly  
@@ -46,6 +47,6 @@ I hear my baby calling my name
 And I know that she's the only one  
 And if I die in Raleigh at least I will die free  
 
-Chorus ad lib  
+**Chorus ad lib**
 
 *Bob Dylan and Ketch Secor*
